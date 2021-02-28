@@ -7,7 +7,7 @@ services:
 
 before_install:
   - echo "start Creating an image width dockerfile"
-  - docker build -t ian90/docker-react-app -f Dockerfile.dev
+  - docker build -t ian90/docker-react-app -f Dockerfile.dev .
 
 script:
   - docker run -e CI=ture ian90/docker-react-app npm run test -- --coverage
